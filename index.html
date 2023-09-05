@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="Persona.js"></script>
+    <script defer src="script.js"></script>
+    <!--Gaston-->
+  </head>
+
+  <body>
+    <section id="button-section">
+      <h1>Botón + prompt</h1>
+      <button onclick="handlePromptButtonClick()">Hacer click aquí</button>
+      <!-- Recibir input del usuario al hacer click en el botón, y escribirlo en el span -->
+      El usuario escribió: <span id="button-input">(Esperando input)</span>
+    </section>
+
+    <section id="boxes-section">
+      <h1>Cajas</h1>
+      <div class="boxes-container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <!-- Agregar acá más cajas -->
+        <div class="not-a-box">X</div>
+      </div>
+      <button onclick="handleAddBoxButtonClick()">Agregar otra caja</button>
+    </section>
+
+    <section id="form-section">
+      <h1>Formulario</h1>
+      <form>
+        <div class="form-row">
+          <label for="name-field">Nombre</label>
+          <input type="text" name="name" id="name-field" />
+        </div>
+        <div class="form-row">
+          <label for="surname-field">Apellido</label>
+          <input type="text" name="surname" id="surname-field" />
+        </div>
+        <div class="form-row">
+          <input type="radio" name="sex" value="male" id="sex-male-option" />
+          <label for="sex-male-option">Hombre</label>
+          <input
+            type="radio"
+            name="sex"
+            value="female"
+            id="sex-female-option"
+          />
+          <label for="sex-female-option">Mujer</label>
+        </div>
+        <div class="form-row">
+          <input type="reset" value="Limpiar" />
+          <input type="submit" value="Enviar" />
+        </div>
+      </form>
+      <div>Personas cargadas: <span id="form-input">[]</span></div>
+      <div>Cantidad de hombres: <span id="form-input-male-count">0</span></div>
+      <div>
+        Cantidad de mujeres: <span id="form-input-female-count">0</span>
+      </div>
+    </section>
+
+    <section id="timer-section">
+      <h1>Timer</h1>
+      Tiempo restante: <span id="timer-count">10</span> segundos
+      <button onclick="startTimer()">Comenzar timer</button>
+    </section>
+  </body>
+</html>
