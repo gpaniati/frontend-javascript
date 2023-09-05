@@ -47,6 +47,19 @@ function showPersonas() {
   document.getElementById("form-input-female-count").textContent = women.length;
 }
 
+//Borra cajita.
+function handleDeleteBox() {
+  alert("Borro cajita");
+  const boxes = document.getElementsByClassName("box");
+  const box = boxes[boxes.length - 1 ];
+  //console.log(box);
+  box.remove();
+}
+
+document
+  .getElementsByClassName("not-a-box")[0]
+  .addEventListener("click", handleDeleteBox);
+
 document
   .getElementById("form-section")
   .getElementsByTagName("form")[0]
